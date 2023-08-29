@@ -1,6 +1,9 @@
 #Netfix GTP
  - create-react-app
  - configure tailwindcss
+ - Header
+ - Login form
+ - Sign up form
 
 
 #Features
