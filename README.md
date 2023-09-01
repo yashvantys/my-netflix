@@ -1,6 +1,6 @@
 #Netfix GTP
- - create-react-app
- - configure tailwindcss
+ - Create-react-app
+ - Configure tailwindcss
  - Header
  - Routing of App
  - Login form
@@ -15,6 +15,12 @@
  - Implemented Signout
  - Update profile API
  - Fetch movie from TMDB
+ - Bugfix: display name 
+ - Bugfix: redirect user from browse to login if not logged in
+ - Unsubscribe when onAuthStateChanged callback
+ - Add hardcoded values in constant file
+ - Register for TMDB API and create an app and get accesstoken
+ - Get data from TMDB now playing movies list API
 
 
 

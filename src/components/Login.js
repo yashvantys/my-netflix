@@ -3,14 +3,13 @@ import Header from './Header'
 import { checkValidateData } from '../utils/validate'
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from '../utils/firebase'
-import { useNavigate } from 'react-router-dom'
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
+import { BACKGROUND_IMAGE_URL } from '../utils/constants';
 
 const Login = () => {
     const [isSignInForm, setIsSignInForm] = useState(true);
     const [errorMessage, setErrorMessage] = useState(null)
-    const navigate = useNavigate()
     const dispatch = useDispatch()
     const email = useRef(null)
     const password = useRef(null)
@@ -40,8 +39,6 @@ const Login = () => {
                     }).then(() => {
                         const { uid, email, displayName } = auth.currentUser;
                         dispatch(addUser({ uid: uid, email: email, displayName: displayName }))
-                        console.log(user)
-                        navigate('/browse')
                     }).catch((error) => {
                         setErrorMessage(error.message)
                     });
@@ -58,9 +55,6 @@ const Login = () => {
                 .then((userCredential) => {
                     // Signed in 
                     const user = userCredential.user;
-                    console.log(user)
-                    navigate('/browse')
-
                 })
                 .catch((error) => {
                     const errorCode = error.code;
@@ -74,7 +68,7 @@ const Login = () => {
         <div>
             <Header />
             <div className='absolute'>
-                <img alt='' src='https://assets.nflxext.com/ffe/siteui/vlv3/00103100-5b45-4d4f-af32-342649f1bda5/64774cd8-5c3a-4823-a0bb-1610d6971bd4/IN-en-20230821-popsignuptwoweeks-perspective_alpha_website_medium.jpg' />
+                <img alt='' src={BACKGROUND_IMAGE_URL} />
             </div>
             <form onSubmit={(e) => e.preventDefault()} className='w-3/12 absolute p-12 bg-black mt-40 mx-auto right-0 left-0 text-white rounded-lg opacity-90'>
                 <h1 className='font-bold  text-3xl py-4'>{isSignInForm ? 'Sign In' : 'Sign Up'}</h1>
