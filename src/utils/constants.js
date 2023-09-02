@@ -10,4 +10,9 @@ export const API_OPTIONS = {
         Authorization: `Bearer ${TMDB_TOKEN}`
     }
 };
-export const CDN_IMAGE_URL = 'https://image.tmdb.org/t/p/w500'
+export const CDN_IMAGE_URL = 'https://image.tmdb.org/t/p/w500';
+export const SUPPORTED_LANGUAGES = [
+    { identifier: "en", name: "English" },
+    { identifier: "hindi", name: "Hindi" },
+    { identifier: "spanish", name: "Spanish" }
+]
