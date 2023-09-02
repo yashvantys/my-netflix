@@ -24,10 +24,16 @@ This project is a Netflix-inspired web application built using React, Redux, goo
 - Developed custom hook for managing now playing movies
 - Fetched and stored movies data and trailer video details
 - Embedded autoplaying and muted YouTube trailer videos
-
-#To-Do (Pending)
+- Designed secondary components: movie list and movie card
 - Movie Suggestions section
 - List of recommended movies
+- Popular Movies
+- Upcoming Movies
+- Trending Movies
+- Top Rated Movies
+
+#To-Do (Pending)
+
 - NetflixGPT Component
 - Search Bar for finding movies
 - Movie Suggestions based on user preferences
@@ -35,8 +41,7 @@ This project is a Netflix-inspired web application built using React, Redux, goo
 - Enabled user account creation and management-
 - Fixed bugs related to user sign up and redirection
 - Improved code in Login.js using custom hooks
-- Fixed header positioning
-- Designed secondary components: movie list and movie card
+- Fixed header positioning 
 - Utilized TMDB Image CDN URL for movie images
 - Utilized hooks for managing movie sections
 - GPT Search Page, Bar.
