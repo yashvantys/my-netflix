@@ -6,7 +6,7 @@ import { BACKGROUND_IMAGE_URL } from '../utils/constants'
 const GtpSearch = () => {
     return (
         <div>
-            <div className='absolute -z-20'>
+            <div className='fixed -z-20'>
                 <img alt='logo' src={BACKGROUND_IMAGE_URL} />
             </div>
             <GtpSearchBar />
